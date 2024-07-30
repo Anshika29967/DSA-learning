@@ -1,0 +1,15 @@
+class Solution {
+public:
+    int maxProfit(vector<int>& prices) {
+        if(prices.empty())return 0;
+        int minprice=INT_MAX;
+        int maxprofit=0;
+        for(int price:prices){
+            minprice=std::min(minprice,price);
+            int profit=price-minprice;
+            maxprofit=std::max(maxprofit,profit);
+        }
+        return maxprofit;
+        
+    }
+};
