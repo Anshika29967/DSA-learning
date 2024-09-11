@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+
+int main() {
+    // Write C++ code here
+    int n=5;
+    for(int i=1;i<n;i++){
+        for(int j=i;j<n;j++)
+        {
+            cout<<i;
+        }
+        cout<<endl;
+    }
+    return 0;
+}
+
+# Output of the code will be -----
+
+1111
+222
+33
+4
