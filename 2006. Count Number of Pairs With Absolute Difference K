@@ -1,0 +1,12 @@
+class Solution {
+public:
+    int countKDifference(vector<int>& nums, int k) {
+        unordered_map<int, int> frequency;
+        int count = 0;
+        for (int num : nums) {
+           count += frequency[num - k] + frequency[num + k];
+           frequency[num]++;
+        }
+    return count;
+    }
+};
