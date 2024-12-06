@@ -1,0 +1,20 @@
+class Solution {
+public:
+    int mostFrequentEven(vector<int>& nums) {
+        unordered_map<int,int>freqmap;
+        int Maxfreq=0;
+        int result=-1;
+        for(int num : nums){
+            if(num%2==0){
+                freqmap[num]++;
+            }
+        }
+        for(auto& [num,freq]: freqmap){
+            if(freq>Maxfreq || (freq==Maxfreq && num < result)){
+                Maxfreq=freq;
+                result=num;
+            }
+        }
+        return result;
+    }
+};
